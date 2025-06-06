@@ -12,20 +12,52 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/PhpProject1/continue.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_flip.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/for.php</file>
-            <file>file:/C:/xampp/htdocs/PhpProject1/break.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/whileloop.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/class1.php</file>
-            <file>file:/C:/xampp/htdocs/PhpProject1/foreach.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_diff.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_intersect_assoc.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_combine.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_keys.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_replace.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/constants.php</file>
-            <file>file:/C:/xampp/htdocs/PhpProject1/if_else.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_count_values.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_intersect.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_pop.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_replace_recursive.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/switch.php</file>
-            <file>file:/C:/xampp/htdocs/PhpProject1/strings.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_intersect_uassoc.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_merge.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_map.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/index.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/magic_constant.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_intersect_key.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/dowhile.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_fill_keys.php</file>
             <file>file:/C:/xampp/htdocs/PhpProject1/Class.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_column.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_diff_ukey.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_fill.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/continue.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_intersect_ukey.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/break.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_diff_key.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_pad.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_diff_uassoc.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_merge_recursive.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/foreach.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/if_else.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/strings.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_rand.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_filter.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_chunk.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_multisort.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_change_key_case.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_diff_assoc.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/key_exists.php</file>
+            <file>file:/C:/xampp/htdocs/PhpProject1/array_function/array_reduce.php</file>
         </group>
     </open-files>
 </project-private>
