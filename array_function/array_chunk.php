@@ -1,4 +1,4 @@
 <?php
-$bikes=array("splender","shine","cbz","dirty bike");
+$bikes=array("splender","shine","cbz","dirt bike");
 print_r(array_chunk($bikes,2));
 ?>
