@@ -1,61 +1,11 @@
 <html>
     <head>
-    <title>
-        Addmission Form
-    </title>
-        <style>
-            body
-            {
-                background: #988eed;
-                margin: 0px;
-                padding: 0px;
-                
-            }
-            .container
-            {
-                max-width: 700px;
-                margin: 40px auto;
-                padding: 30px;
-                box-shadow: 0 4px 10px rgba(0 , 0, 0, 0.1);
-                border-radius: 5px;
-                border:  2px white;
-                background: darkslateblue;
-            
-            }
-            h2
-            {
-                text-align: center;
-                color: white;
-                border: 1px solid white;
-                border-radius: 3px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            .one
-            {
-                color: white;
-            }
-            .two
-            {
-                
-            }
-            button
-            {
-               padding-left: 250px;
-               padding-right: 250px;
-               border-radius: 10px;
-               border: 1px solid white;
-               
-                
-            }
-            #fname
-            {
-                
-            }
-            </style>
+    <title>Addmission Form </title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container">
+        <div>
             <h2>Admission Form</h2>
             <form id="adform"> 
                 <input type="text" id="fname" placeholder="First Name">
@@ -65,10 +15,8 @@
                 <input type="text" id="lname" placeholder="Last Name">
                 
                 <input type="tel" id="tel" placeholder="Enter mobile no">
-                <br>
-                <br>
+               
                 <input type="text" id="address" placeholder="Email Address">
-                
                 
                 <label class="one"> Select Gender :</label>
                 
@@ -76,8 +24,7 @@
                 <input type="radio" name="option" value="female">Female
                 <input type="radio" name="option" value="other"> Other
                 
-                <br>
-                <br>
+                
                 <label class="one"> Education </label> 
                 
                 <label class="two">
@@ -128,8 +75,7 @@
                 ?>
                 </select>
                 
-                <br>
-                <br>
+                
                 <input type="text" name="wing" placeholder="Wing/Flat No">
 
                 <input type="text" name="Building" placeholder="Building/Society">
@@ -137,14 +83,13 @@
                 <input type="text" name="Area" placeholder="Area">
                 
                 <input type="text" name="City" placeholder="City">
-                <br>
-                <br>
+                
                 <input type="text" name="Landmark" placeholder="Land Mark">
+                
                 <input type="text" name="Pincode" placeholder="Pin Code">
-                <br>
-                <br>
-                <label class="one">Date of Birth
-                <br>
+                
+                <label class="one">Date of Birth</label>
+                
                 <input type="date" name="dob" placeholder="">
                 
                 
@@ -201,13 +146,11 @@
                     <option name="uttar pradeshh"> uttar pradesh</option>
                     <option name="West Bengal"> West bengal</option>
                 </select>
-                <br><br>
+                
                 <input type="text" name="ref" placeholder="Reference By">
                 
                 <input type="file" name="file" placeholder="Upload Your Photo">
-                <br>
-                <br>
-                <br>
+                
             </form>
             <button type="Submit" Value="Submit" > Submit </button>
         </div>
