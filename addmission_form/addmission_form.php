@@ -10,9 +10,26 @@
             {
                 background-color: #988eed;
             }
-            @media screen only and (min-width:1024px) 
+            @media (max-width:820px) 
             {
+                div
+                {
+                   margin : 0px 0px 20px 0px;
+                   padding: 20px;
+                   
+                }
                 
+                span.span.input 
+                {
+                   margin: 0px 0px 20px 0px;
+                }
+                #male,#female,#other
+                {
+                    float: bottom;
+                    
+                }
+                
+              
             }
             input::placeholder
             {
@@ -40,37 +57,37 @@
             <h2 class="fw-bold text-center display-4 border border-5 border-dark rounded-pill mt-5 mb-5">Admission Form</h2>
 
             <div class="row">
-                <div class="col-sm-3">
-                    <input class=" md_ad_form col-sm-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="fname" placeholder="First Name">
+                <div id="fname" class="col-lg-3">
+                    <input class=" md_ad_form col-lg-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="fname" placeholder="First Name">
                 </div>
-                <div class="col-sm-3">
-                    <input class="md_ad_form col-sm-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="Mname" placeholder="Middle Name">
+                <div id="mname" class="col-lg-3">
+                    <input class="md_ad_form col-lg-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="Mname" placeholder="Middle Name">
                 </div>
-                <div class="col-sm-3">
-                    <input class="md_ad_form col-sm-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="lname" placeholder="Last Name">
+                <div id="lname" class="col-lg-3">
+                    <input class="md_ad_form col-lg-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="lname" placeholder="Last Name">
                 </div>
-                <div class="col-sm-3">
-                    <input class="md_ad_form col-sm-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="tel" id="tel" placeholder="Enter mobile no">
+                <div id="m" class="col-lg-3">
+                    <input class="md_ad_form col-lg-12  bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="tel" id="tel" placeholder="Enter mobile no">
                 </div>
             </div>  
             
             <div class="row">
-                <input class="col-sm-6 p-2 mb-3 mt-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="address" placeholder="Email Address">
+                <input class="col-lg-6 p-2 mb-3 mt-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" id="address" placeholder="Email Address">
 
-                <span class="col-sm-6 mt-3 fw-bold">Gender : 
-                    <span class="col-sm-6 "> </span>
+                <span class="col-lg-6 mt-3 fw-bold">Gender : 
+                    <span class="col-lg-6 "> </span>
                     <br>
-                    <input class="col-sm-1  mb-3" type="radio" name="option" value="male">male
-                    <input class="col-sm-1 mb-3" type="radio" name="option" value="female">female
-                    <input class="col-sm-1  mb-3" type="radio" name="option" value="other">Others</span>
+                    <input id="male" class="col-lg-1  mb-3" type="radio" name="option" value="male">male
+                    <input id="female" class="col-lg-1 mb-3" type="radio" name="option" value="female">female
+                    <input id="other" class="col-lg-1  mb-3" type="radio" name="option" value="other">Others</span>
             </div>
 
 
             <div class="row">
-                <div class="col-sm-3">
-                    <span class="col-sm-12 fw-bold"> Education :</span> 
+                <div class="col-lg-3">
+                    <span class="col-lg-12 fw-bold"> Education :</span> 
 
-                    <select class="col-sm-12 mt-1 bg-transparent">
+                    <select class="col-lg-12 mt-1 bg-transparent">
                         <option name="eduction">Education</option>
                         <option name="SSC"> SSC </option>
                         <option name="HSC"> HSC </option>
@@ -81,9 +98,9 @@
                 </div>    
 
 
-                <div class="col-sm-3">
-                    <span class="col-sm-12 fw-bold bg-transparent border border-top-0 border-start-0 border-end-0 border-dark "> language : </span>
-                    <select class="col-sm-12 mt-1 bg-transparent">
+                <div class="col-lg-3">
+                    <span class="col-lg-12 fw-bold bg-transparent border border-top-0 border-start-0 border-end-0 border-dark "> language : </span>
+                    <select class="col-lg-12 mt-1 bg-transparent">
                         <option name="language"> Language </option>
                         <option name="marathi"> Marathi </option>
                         <option name="Hindi"> Hindi </option>
@@ -93,9 +110,9 @@
                     </select>
                 </div>
 
-                <div class="col-sm-3">
-                    <span class="col-sm-12 fw-bold">Percentage:</span>
-                    <select class="col-sm-12 mt-1 bg-transparent">
+                <div class="col-lg-3">
+                    <span class="col-lg-12 fw-bold">Percentage:</span>
+                    <select class="col-lg-12 mt-1 bg-transparent">
                         <?php
                         for ($i = 1; $i <= 100; $i++) {
                             echo '<option value="$i">' . $i . '</option>';
@@ -104,9 +121,9 @@
                     </select>
                 </div>
 
-                <div class="col-sm-3">
-                    <span class="col-sm-12 fw-bold">Pass Year:</span>
-                    <select class="col-sm-12 mt-1 bg-transparent">
+                <div class="col-lg-3">
+                    <span class="col-lg-12 fw-bold">Pass Year:</span>
+                    <select class="col-lg-12 mt-1 bg-transparent">
                         <?php
                         for ($i = 1800; $i <= 2025; $i++) {
                             echo '<option value="$i">' . $i . '</option>';
@@ -116,42 +133,42 @@
                 </div>
 
                 <div class="row mt-4">
-                    <div class="col-sm-3">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="wing" placeholder="Wing/Flat No">
+                    <div class="col-lg-3">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="wing" placeholder="Wing/Flat No">
                     </div>
-                    <div class="col-sm-3">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Building" placeholder="Building/Society">
+                    <div class="col-lg-3">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Building" placeholder="Building/Society">
                     </div>
-                    <div class="col-sm-3">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Area" placeholder="Area">
+                    <div class="col-lg-3">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Area" placeholder="Area">
                     </div>
-                    <div class="col-sm-3">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="City" placeholder="City">
+                    <div class="col-lg-3">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="City" placeholder="City">
                     </div>
                 </div>
 
 
                 <div class="row mt-3">
-                    <div class="col-sm-6">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Landmark" placeholder="Land Mark">
+                    <div class="col-lg-6">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Landmark" placeholder="Land Mark">
                     </div>
-                    <div class="col-sm-6">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Pincode" placeholder="Pin Code">
+                    <div class="col-lg-6">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="Pincode" placeholder="Pin Code">
                     </div>
                 </div>
 
 
                 <div class="row">
 
-                    <div class="col-sm-3">
-                        <span class="col-sm-12 mb-1 fw-bold">Date of Birth:</span>
+                    <div class="col-lg-3">
+                        <span class="col-lg-12 mb-1 fw-bold">Date of Birth:</span>
 
-                        <input class="col-sm-12 mb-2 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark" type="date" name="dob" placeholder="">
+                        <input class="col-lg-12 mb-2 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark" type="date" name="dob" placeholder="">
                     </div>
 
-                    <div class="col-sm-3">
-                        <span class="col-sm-12 fw-bold"> Blood group :</span>
-                        <select class="col-sm-12 mt-1 bg-transparent" >
+                    <div class="col-lg-3">
+                        <span class="col-lg-12 fw-bold"> Blood group :</span>
+                        <select class="col-lg-12 mt-1 bg-transparent" >
                             <option name="bg"> Blood Group </option>
                             <option name="A+"> A+ </option>
                             <option name="A-"> A- </option>
@@ -164,18 +181,18 @@
                         </select>
                     </div>
 
-                    <div class="col-sm-3">
-                        <span class="col-sm-12 mb-1 fw-bold"> Country :</span>
+                    <div class="col-lg-3">
+                        <span class="col-lg-12 mb-1 fw-bold"> Country :</span>
 
-                        <select class="col-sm-12 bg-transparent">
+                        <select class="col-lg-12 bg-transparent">
                             <option name="country"> Country </option>
                             <option name="India"> India </option>
                         </select>
                     </div>
 
-                    <div class="col-sm-3">
-                        <span class="col-sm-12 mb-1 fw-bold"> State :</span>
-                        <select class="col-sm-12 bg-transparent">
+                    <div class="col-lg-3">
+                        <span class="col-lg-12 mb-1 fw-bold"> State :</span>
+                        <select class="col-lg-12 bg-transparent">
                             <option name="state"> select state </option>
                             <option name="Andra pradesh"> Andra Pradesh </option>
                             <option name="Arunachal pradesh"> Arunachal Pradesh </option>
@@ -210,16 +227,16 @@
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col-sm-6">
-                    <input class="col-sm-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="ref" placeholder="Reference By">
+                    <div class="col-lg-6">
+                    <input class="col-lg-12 mb-3 bg-transparent border border-top-0 border-start-0 border-end-0 border-dark text-white" type="text" name="ref" placeholder="Reference By">
                     </div>
-                    <div class="col-sm-6">
-                    <input class="col-sm-12 mb-3" type="file" name="file" placeholder="Upload Your Photo">
+                    <div class="col-lg-6">
+                    <input class="col-lg-12 mb-3" type="file" name="file" placeholder="Upload Your Photo">
                     </div>
                     </div>
 
                 <div class="row">
-                    <button class=" d-flex-justify-content-center col-sm-12 display-6  mr-4 ml-4 border-1 border-dark rounded-pill text-center " type="Submit" Value="Submit" > Submit </button>  
+                    <button class=" d-flex-justify-content-center col-lg-12 display-6  mr-4 ml-4 border-1 border-dark rounded-pill text-center " type="Submit" Value="Submit" > Submit </button>  
                 </div> 
 
 
