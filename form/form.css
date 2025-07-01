@@ -1,0 +1,80 @@
+.body{
+    background: linear-gradient(180deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.container{
+    background: #22C1C3;
+    box-shadow: 5px 5px 8px black;
+    max-width: 600px;
+    width: 75%;
+    margin: 50px auto;
+    padding: 50px;
+
+}
+.col{
+   background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.inpu::placeholder{
+    color:white;
+}
+.inpu{
+    outline: none;
+}
+@media (min-width: 0px) and (max-width: 386px)
+{
+    .container{
+        width: 85%;          
+        margin: auto;
+        height: auto;
+    }
+    .mar{
+        margin: 0px 0px 20px 0px;
+    }
+    .wid{
+        width: 100%;
+    }
+}
+@media (min-width: 386px) and (max-width: 576px) {
+    .container{
+        width: 90%;          
+        margin: 10px auto;
+        margin-top: 20px;
+        padding: 20px;
+        height: auto;
+    }
+    .mar{
+        margin: 0px 0px 20px 0px;
+    }
+    .wid{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 686px){
+    .container{
+        width: 85%;          
+        margin: auto;
+        margin-top: 20px;
+        height: 200%;
+    }
+    .mar{
+        margin: 0px 0px 20px 0px;
+    }
+    .wid{
+        width: 100%;
+    }
+}
+@media (min-width: 686px) and (max-width: 990px){
+    .container{
+        width: 85%;          
+        margin: auto;
+        margin-top: 20px;
+        height: auto;
+    }
+    .mar{
+        margin: 0px 0px 20px 0px;
+    }
+    .wid{
+        width: 100%;
+    }
+}
+
