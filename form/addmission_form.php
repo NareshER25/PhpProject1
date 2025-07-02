@@ -9,28 +9,33 @@
         <link rel="stylesheet" href="form.css">
     </head>
     <body class="body">
-        <script src="valid.js"></script>
-        <form onsubmit="return fmlname()">
+        <script src="form_valid.js"></script>
+        <form onsubmit="return fmllname()">
             <div class="container">
                 <h3 class="display-5  text-center text-black border mt-1 border-dark border-5 mb-3 rounded-pill bg-light pos wid">Admission form</h3>
-                <div class="row">
+                <div class="row"  >
                     <div class="col-sm-3">
-                        <input id="fname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" >
+                        <input id="fname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'">
+                        <div id="fnerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3">
                         <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="middlen" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'">
+                        <div id="mnerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3"><!-- comment -->
                         <input id="lname" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="lastn"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
+                        <div id="lnerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3">
                         <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="no" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'" pattern="[0-9]{10}">
+                        <div id="moberror" class="error-design"></div>
                     </div>
                 </div>
 
                 <div class="row mt-3">
                     <div class="col-sm-6">
                         <input id="em" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text"  placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email id'">
+                    <div id="emailerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-6">
                         <span class="inpu mar col-sm-12 text-black wid"><b class="text-white">Select Gender</b>
@@ -41,6 +46,7 @@
                                 <input id="o" class="inpu col-sm-1 " type="radio" name="option" value="other" >other 
                             </span>
                         </span>
+                        <div id="generror" class="error-design"></div>
                     </div>
                 </div>
 
@@ -55,6 +61,7 @@
                             <option value="11th">11th</option>
                             <option value="12th">12th</option>
                         </select>
+                        <div id="ederror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -67,6 +74,7 @@
                             <option value="English">English</option>
                             <option value="marathi">Marathi</option>
                         </select>
+                        <div id="langerror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -81,6 +89,7 @@
                             }
                             ?>
                         </select>
+                        <div id="pererror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -93,31 +102,38 @@
                                 echo "<option>" . $i . "</option>";
                             }
                             ?>
-                        </select>              
+                        </select>  
+                        <div id="passerror" class="error-design"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4"> 
                     <div class="col-sm-3">
                         <input  id="wing" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="wing" placeholder="Wing/flat no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wing/flat no'">
+                   <div id="wingerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3">
                         <input  id="building" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="build" placeholder="Building" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Building/society'">
+                    <div id="buildingerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3">
                         <input  id="area" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="area"   placeholder="Area" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area'">
+                    <div id="areaerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-3">
                         <input  id="city" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="city"   placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'">
+                   <div id="cityerror" class="error-design"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
                     <div class="col-sm-6">
                         <input requried id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'">
+                    <div id="landmarkerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-6">
                         <input requried id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'">
+                    <div id="pincodeerror" class="error-design"></div>
                     </div>
                 </div>
 
@@ -125,6 +141,7 @@
                     <div class="col-lg-3">
                         <span class="col-lg-12 mt-4 text-white"><b>Dob</b></span>
                         <input id="dob" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="date" name="date" placeholder="Date-of-Birth">
+                    <div id="doberror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -140,6 +157,7 @@
                             <option>AB+</option>
                             <option>AB-</option>
                         </select>
+                        <div id="bloodgrouperror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -149,6 +167,7 @@
                             <option disabled selected value="">country</option>
                             <option>India</option>
                         </select>
+                        <div id="countryerror" class="error-design"></div>
                     </div>
 
                     <div class="col-lg-3">
@@ -185,15 +204,19 @@
                             <option>Uttarakhand</option>
                             <option>West Bengal</option>
                         </select>
+                        <div id="stateerror" class="error-design"></div>
                     </div>
                 </div>
 
                 <div class="row mt-5">
                     <div class="col-sm-6">
                         <input id="reference" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="refer" placeholder="Reference By" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Refercence By'">
+                    <div id="referenceerror" class="error-design"></div>
                     </div>
                     <div class="col-sm-6">
+                        
                         <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="photo"  placeholder="Upload Your photo">
+                   <div id="choserror" class="error-design"></div>
                     </div>
                 </div>
 
