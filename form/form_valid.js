@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    $(".sub").click(function () {
+        $("#su").animate({
+            width: '70%'
+        });
+    });
+});
+
 var isvalid = true;
 
 
@@ -5,38 +13,42 @@ function firstname()
 {
     let firstn = document.getElementById("fname").value;
     let ffnerror = document.getElementById("fnerror");
+    let fninput = document.getElementById("fname");
 
-    if (firstn.includes(" ") || (firstn === "") )
+    if (firstn.includes(" ") || (firstn === ""))
     {
-        firstn.includes(" ")?(ffnerror.textContent='First Name Should Not Conatin space'):(ffnerror.textContent='First Name Should Not Be Empty');
+        firstn.includes(" ") ? (ffnerror.textContent = 'First Name Should Not Conatin space') : (ffnerror.textContent = 'First Name Should Not Be Empty');
         ffnerror.style.display = 'block';
+        fninput.classList.add("inpu_error");
         isvalid = false;
-    
-    }
-    else
+
+    } else
     {
-       
+
         ffnerror.style.display = "none";
-      
+        fninput.classList.remove("inpu_error");
+
     }
-    
+
 }
 
 function middlename()
 {
     let middlen = document.getElementById("mname").value;
     let mmnerror = document.getElementById("mnerror");
-    if (middlen.includes(" ") || middlen ==="")
+    let mninput = document.getElementById("mname");
+    if (middlen.includes(" ") || middlen === "")
     {
-        middlen.includes(" ")?(mmnerror.textContent='Middle Name Should Not Conatin Space'):(mmnerror.textContent='Middle Name Should Not Be Empty');
+        middlen.includes(" ") ? (mmnerror.textContent = 'Middle Name Should Not Conatin Space') : (mmnerror.textContent = 'Middle Name Should Not Be Empty');
         mmnerror.style.display = 'block';
+        mninput.classList.add("inpu_error");
         isvalid = false;
-    } 
-     else
+    } else
     {
         mmnerror.style.display = "none";
+        mninput.classList.remove("inpu_error");
     }
-    
+
 
 }
 
@@ -45,19 +57,21 @@ function lastname()
 
     let lastn = document.getElementById("lname").value;
     let llnerror = document.getElementById(("lnerror"));
+    let lninput = document.getElementById("lname");
 
     if (lastn.includes(" ") || lastn === "")
     {
-        lastn.includes(" ")?(llnerror.textContent='Last Name Should Not Contain Space'):(llnerror.textContent='Last Name Sould Not Be Empty');
+        lastn.includes(" ") ? (llnerror.textContent = 'Last Name Should Not Contain Space') : (llnerror.textContent = 'Last Name Sould Not Be Empty');
         llnerror.style.display = 'block';
+        lninput.classList.add("inpu_error");
         isvalid = false;
-    }  else
+    } else
     {
-        
+
         llnerror.style.display = "none";
-       
+        lninput.classList.remove("inpu_error");
     }
-   
+
 }
 
 
@@ -65,37 +79,45 @@ function mobileno()
 {
     let num = document.getElementById("mob").value;
     let mobberror = document.getElementById("moberror");
+    let mobinput = document.getElementById("mob");
 
-    if (!(num.length=== 10) || isNaN(num))
+    if (!(num.length === 10) || isNaN(num))
     {
-        isNaN(num) ? (mobberror.textContent='Enter Number only'):(mobberror.textContent='Please Enter Number 10 digit Number');
+        isNaN(num) ? (mobberror.textContent = 'Enter Number only') : (mobberror.textContent = 'Please Enter Number 10 digit Number');
         mobberror.style.display = 'block';
+        mobinput.classList.add("inpu_error");
         isvalid = false;
     } else
     {
-       
+
         mobberror.style.display = "none";
-        
+        mobinput.classList.remove("inpu_error");
     }
-    
+
 }
 
 function email()
 {
     let emaill = document.getElementById("em").value;
     let emailerrorr = document.getElementById("emailerror");
-    if(emaill.includes("@") && emaill.includes("."))
+    let emailinput = document.getElementById("em");
+
+    if (emaill.includes("@") && emaill.includes(".") && emaill !== "")
     {
         emailerrorr.style.display = "none";
-        
+        emailinput.classList.remove("inpu_error");
+
+
     } else
     {
-        emailerrorr.textContent = 'Error Email Should Contain @ and Period';
+        emaill === "" ? (emailerrorr.textContent = 'Email Should Not Be Blank ') : (emailerrorr.textContent = ' Email Should Contain @ and .');
         emailerrorr.style.display = 'block';
+        emailinput.classList.add("inpu_error");
+
         isvalid = false;
-        
+
     }
-    
+
 }
 
 
@@ -106,6 +128,8 @@ function gender()
     let other = document.getElementById("o").checked; //false
     let gennerror = document.getElementById("generror");
 
+
+
     if (!male && !female && !other)
     {
         gennerror.textContent = 'Please Select Gender';
@@ -115,45 +139,55 @@ function gender()
     {
         gennerror.textContent = '';
         gennerror.style.display = "none";
-        
+
     }
-   
+
 }
 
 function education()
 {
     let educationn = document.getElementById("education").value;
     let edderror = document.getElementById("ederror");
+    let eduinput = document.getElementById("education");
+
     if (educationn === "")
     {
         edderror.textContent = 'Please Select The education field';
         edderror.style.display = 'block';
+        eduinput.classList.add("inpu_error");
+
         isvalid = false;
     } else
     {
-        edderror.textContent = '';
+
         edderror.style.display = "none";
-       
+        eduinput.classList.remove("inpu_error");
+
+
     }
-    
+
 }
 function language()
 {
 
     let languagee = document.getElementById("language").value;
     let langgerror = document.getElementById("langerror");
+    let langinput = document.getElementById("language");
     if (languagee === "")
     {
         langgerror.textContent = 'Please Select The language';
         langgerror.style.display = 'block';
+        langinput.classList.add("inpu_error");
+
         isvalid = false;
     } else
     {
-        langgerror.textContent = '';
         langgerror.style.display = "none";
-        
+        langinput.classList.remove("inpu_error");
+
+
     }
-    
+
 }
 
 function percentage()
@@ -161,18 +195,26 @@ function percentage()
 
     let percentagee = document.getElementById("percentage").value;
     let perrerror = document.getElementById("pererror");
+    let perinput = document.getElementById("percentage");
+
+
+
     if (percentagee === "")
     {
         perrerror.textContent = 'Please Select The Percentage';
         perrerror.style.display = 'block';
+        perinput.classList.add("inpu_error");
+
+
         isvalid = false;
     } else
     {
         perrerror.textContent = '';
         perrerror.style.display = "none";
-        
+        perinput.classList.remove("inpu_error");
+
     }
-    
+
 }
 
 function passyear()
@@ -180,18 +222,24 @@ function passyear()
 
     let passyearr = document.getElementById("passyear").value;
     let passserror = document.getElementById("passerror");
+    let passinput = document.getElementById("passyear");
+
     if (passyearr === "")
     {
         passserror.textContent = 'Please Select The Pass Year';
         passserror.style.display = 'block';
+        passinput.classList.add("inpu_error");
+
         isvalid = false;
     } else
     {
         passserror.textContent = '';
         passserror.style.display = "none";
-       
+        passinput.classList.remove("inpu_error");
+
+
     }
-    
+
 }
 
 function wing()
@@ -199,20 +247,26 @@ function wing()
 
     let wingg = document.getElementById("wing").value;
     let winggerror = document.getElementById("wingerror");
+    let winginput = document.getElementById("wing");
+
 
 
     if (wingg === "")
     {
         winggerror.textContent = 'Please Fill the Wing/flat No';
         winggerror.style.display = 'block';
+        winginput.classList.add("inpu_error");
+
         isvalid = false;
     } else
     {
         winggerror.textContent = '';
         winggerror.style.display = "none";
-        
+        winginput.classList.remove("inpu_error");
+
+
     }
-    
+
 
 }
 
@@ -221,17 +275,21 @@ function building()
 
     let buildingg = document.getElementById("building").value;
     let buildderror = document.getElementById("buildingerror");
+    let buildinput = document.getElementById("building");
+
     if (buildingg === "")
     {
         buildderror.textContent = 'Please Fill the Building';
         buildderror.style.display = 'block';
+        buildinput.classList.add("inpu_error");
+
         isvalid = false;
-    }
-    else
+    } else
     {
         buildderror.textContent = '';
         buildderror.style.display = "none";
-        
+        buildinput.classList.remove("inpu_error");
+
     }
 
 }
@@ -241,186 +299,233 @@ function area()
 
     let Areaa = document.getElementById("area").value;
     let areaaerror = document.getElementById("areaerror");
+    let areainput = document.getElementById("area");
+
     if (Areaa === "")
     {
         areaaerror.textContent = 'Please Fill the Area';
         areaaerror.style.display = 'block';
+        areainput.classList.add("inpu_error");
+
         isvalid = false;
     } else
     {
-        
+
         areaaerror.style.display = "none";
-        
+        areainput.classList.remove("inpu_error");
+
+
     }
 }
-    
-    function city()
-    {
-          
-    let cityy=document.getElementById("city").value;
-    let cityyerror=document.getElementById("cityerror");
-    if(cityy=== "")
+
+function city()
+{
+
+    let cityy = document.getElementById("city").value;
+    let cityyerror = document.getElementById("cityerror");
+    let cityinput = document.getElementById("city");
+
+    if (cityy === "")
     {
         cityyerror.textContent = 'Please Fill the city';
         cityyerror.style.display = 'block';
-        isvalid = false;
-    }  
-    else
-    {
-        cityyerror.style.display='none';
-    }
-        
-    }
-    
-    function landmark()
-    {
-        
-            
-    let landmarkk=document.getElementById("landmark").value;
-    let landmarkkerror=document.getElementById("landmarkerror");
-    if(landmarkk=== "")
-    {
-        landmarkkerror.textContent="Please Fill the landmark";
-        landmarkkerror.style.display='block';
-        isvalid =false;
-    }
-    else
-    {
-        landmarkkerror.style.display="none";
-    }
-    }
-    
-    
-      
-function reference()
-{
+        cityinput.classList.add("inpu_error");
 
-    let referencee=document.getElementById("reference").value;
-    let referencerror=document.getElementById("referenceerror");
-    if( referencee==="")
+        isvalid = false;
+    } else
     {
-        referencerror.textContent='please fill the reference by';
-        referencerror.style.display='block';
-        isvalid= false;
-    }
-    else
-    {
-        referencerror.style.display='none';
+        cityyerror.style.display = 'none';
+        cityinput.classList.remove("inpu_error");
+
     }
 
 }
-    function bloodgroup()
+
+function landmark()
+{
+
+
+    let landmarkk = document.getElementById("landmark").value;
+    let landmarkkerror = document.getElementById("landmarkerror");
+    let landmarkinput = document.getElementById("landmark");
+
+    if (landmarkk === "")
     {
-    let bloodgrp=document.getElementById("bldgrp").value;
-    let bloodgrperror=document.getElementById("bloodgrouperror");
-    if(bloodgrp==="")
+        landmarkkerror.textContent = "Please Fill the landmark";
+        landmarkkerror.style.display = 'block';
+        landmarkinput.classList.add("inpu_error");
+
+        isvalid = false;
+    } else
     {
-        bloodgrperror.textContent='please select the bloodgroup';
-        bloodgrperror.style.dispaly='block';
-        isvalid= false;
+        landmarkkerror.style.display = "none";
+        landmarkinput.classList.remove("inpu_error");
+
     }
-    else
+}
+
+
+
+function reference()
+{
+
+    let referencee = document.getElementById("reference").value;
+    let referencerror = document.getElementById("referenceerror");
+    let refinput = document.getElementById("reference");
+
+    if (referencee === "")
     {
-        bloodgrperror.style.dispaly='none';
-    }
-    }
-    
-    function state()
+        referencerror.textContent = 'please fill the reference by';
+        referencerror.style.display = 'block';
+        refinput.classList.add("inpu_error");
+
+        isvalid = false;
+    } else
     {
-            let statee=document.getElementById("stateee").value;
-            let staterrorr=document.getElementById("stateerror");
-    if(statee==="")
-    {
-        staterrorr.textContent='Please Select The State';
-        staterrorr.style.display='block';
-        isvalid= false;
-    }
-    else
-    {
-        staterrorr.style.display='none';
-    }
+        referencerror.style.display = 'none';
+        refinput.classList.remove("inpu_error");
+
     }
 
-    function country()
+}
+function bloodgroup()
+{
+    let bloodgrp = document.getElementById("bldgrp").value;
+    let bloodgrperror = document.getElementById("bloodgrouperror");
+    let bloodinput = document.getElementById("bldgrp");
+
+    if (bloodgrp === "")
     {
-    let countryyy=document.getElementById("countryy").value;
-    let countryerrorr=document.getElementById("countryerror");
-    if(countryyy==="")
+        bloodgrperror.textContent = 'please select the bloodgroup';
+        bloodgrperror.style.dispaly = 'block';
+        bloodinput.classList.add("inpu_error");
+
+        isvalid = false;
+    } else
     {
-        countryerrorr.textContent='Please Select The Country';
-        countryerrorr.style.display='block';
-        isvalid=false;
+        bloodgrperror.style.dispaly = 'none';
+        bloodinput.classList.remove("inpu_error");
+
     }
-     else
+}
+
+function state()
+{
+    let statee = document.getElementById("stateee").value;
+    let staterrorr = document.getElementById("stateerror");
+    let stateinput = document.getElementById("stateee");
+
+    if (statee === "")
     {
-        countryerrorr.style.display='none';
+        staterrorr.textContent = 'Please Select The State';
+        staterrorr.style.display = 'block';
+        stateinput.classList.add("inpu_error");
+
+        isvalid = false;
+    } else
+    {
+        staterrorr.style.display = 'none';
+        stateinput.classList.remove("inpu_error");
+
     }
+}
+
+function country()
+{
+    let countryyy = document.getElementById("countryy").value;
+    let countryerrorr = document.getElementById("countryerror");
+    let countryinput = document.getElementById("countryy");
+
+    if (countryyy === "")
+    {
+        countryerrorr.textContent = 'Please Select The Country';
+        countryerrorr.style.display = 'block';
+        countryinput.classList.add("inpu_error");
+
+        isvalid = false;
+    } else
+    {
+        countryerrorr.style.display = 'none';
+        countryinput.classList.remove("inpu_error");
+
     }
-    
+}
+
 
 
 
 function dob()
 {
-   
-    let dobb=document.getElementById("dob").value;
-    let doberrorr=document.getElementById("doberror");
-    if(dobb==="")
+
+    let dobb = document.getElementById("dob").value;
+    let doberrorr = document.getElementById("doberror");
+    let dobinput = document.getElementById("dob");
+
+    if (dobb === "")
     {
-        doberrorr.textContent='Please Select The Date Of Birth';
-        doberrorr.style.display='block';
+        doberrorr.textContent = 'Please Select The Date Of Birth';
+        doberrorr.style.display = 'block';
+        dobinput.classList.add("inpu_error");
+
         isvalid = false;
-    }
-   else
+    } else
     {
-        doberrorr.style.display='none';
+        doberrorr.style.display = 'none';
+        dobinput.classList.remove("inpu_error");
+
     }
 }
 
 function pincode()
 {
 
-    let pincodee=document.getElementById("pincode").value;
-    let pincodeerror=document.getElementById("pincodeerror");
-    
-    if(pincodee==="")
+    let pincodee = document.getElementById("pincode").value;
+    let pincodeerror = document.getElementById("pincodeerror");
+    let pininput = document.getElementById("pincode");
+
+
+    if (pincodee === "" || !(pincodee.length === 6))
     {
-        pincodeerror.textContent="Please Fill The Pincode";
-        pincodeerror.style.display="block";
+
+        pincodee === "" ? (pincodeerror.textContent = "Pincode Cannot Be Blank") : (pincodee.length !== 6) ? (pincodeerror.textContent = "Pincode Should be of 6 digits") : (pincodeerror.textContent = "Pincode can Only Be in Number");
+        pincodeerror.style.display = 'block';
+        pininput.classList.add("inpu_error");
+
         isvalid = false;
-    }
-    else
+
+    } else
     {
-        pincodeerror.style.display="none";
-       
+        pincodeerror.style.display = 'none';
+        pininput.classList.remove("inpu_error");
+
     }
 }
 function choose()
 {
-    
 
-     let choosee= document.getElementById("choose").value;
-     let chooseerror=document.getElementById("choserror");
-     
-     if (choosee==="")
-     {
-         chooseerror.textContent='Please Select The Photo';
-         chooseerror.style.display='block';
-         isvalid=false;
-     }
-     else
-     {
-         chooseerror.style.display='none';
-     }
+
+    let choosee = document.getElementById("choose").value;
+    let chooseerror = document.getElementById("choserror");
+
+    if (choosee === "")
+    {
+        chooseerror.textContent = 'Please Select The Photo';
+        chooseerror.style.display = 'block';
+        isvalid = false;
+    } else
+    {
+        chooseerror.style.display = 'none';
+    }
 }
+
 
 function fmllname()
 {
-    
-    
 
-    
-    firstname() ;
+
+
+
+    firstname();
     middlename();
     lastname();
     mobileno();
@@ -442,10 +547,13 @@ function fmllname()
     choose();
     landmark();
     pincode();
-    
-    
+
+
     return isvalid;
 }
+
+
+
 
 
 
