@@ -2,12 +2,12 @@ $(document).ready(function () {
     $(".sub").click(function () {
         $("#su").animate({
             width: '70%'
+
         });
     });
 });
 
 var isvalid = true;
-
 
 function firstname()
 {
@@ -20,9 +20,12 @@ function firstname()
         firstn.includes(" ") ? (ffnerror.textContent = 'First Name Should Not Conatin space') : (ffnerror.textContent = 'First Name Should Not Be Empty');
         ffnerror.style.display = 'block';
         fninput.classList.add("inpu_error");
+        fninput.style.background = 'red';
+        fninput.focus();
         isvalid = false;
 
-    } else
+    } 
+    else
     {
 
         ffnerror.style.display = "none";
@@ -42,8 +45,11 @@ function middlename()
         middlen.includes(" ") ? (mmnerror.textContent = 'Middle Name Should Not Conatin Space') : (mmnerror.textContent = 'Middle Name Should Not Be Empty');
         mmnerror.style.display = 'block';
         mninput.classList.add("inpu_error");
+                mninput.focus();
+
         isvalid = false;
-    } else
+    } 
+    else
     {
         mmnerror.style.display = "none";
         mninput.classList.remove("inpu_error");
@@ -64,6 +70,8 @@ function lastname()
         lastn.includes(" ") ? (llnerror.textContent = 'Last Name Should Not Contain Space') : (llnerror.textContent = 'Last Name Sould Not Be Empty');
         llnerror.style.display = 'block';
         lninput.classList.add("inpu_error");
+                lninput.focus();
+
         isvalid = false;
     } else
     {
@@ -86,6 +94,8 @@ function mobileno()
         isNaN(num) ? (mobberror.textContent = 'Enter Number only') : (mobberror.textContent = 'Please Enter Number 10 digit Number');
         mobberror.style.display = 'block';
         mobinput.classList.add("inpu_error");
+                mobinput.focus();
+
         isvalid = false;
     } else
     {
@@ -113,6 +123,8 @@ function email()
         emaill === "" ? (emailerrorr.textContent = 'Email Should Not Be Blank ') : (emailerrorr.textContent = ' Email Should Contain @ and .');
         emailerrorr.style.display = 'block';
         emailinput.classList.add("inpu_error");
+                emailinput.focus();
+
 
         isvalid = false;
 
@@ -127,13 +139,15 @@ function gender()
     let female = document.getElementById("f").checked; // false 
     let other = document.getElementById("o").checked; //false
     let gennerror = document.getElementById("generror");
-
+   
 
 
     if (!male && !female && !other)
     {
         gennerror.textContent = 'Please Select Gender';
         gennerror.style.display = 'block';
+        gennerror.focus();
+
         isvalid = false;
     } else
     {
@@ -155,6 +169,8 @@ function education()
         edderror.textContent = 'Please Select The education field';
         edderror.style.display = 'block';
         eduinput.classList.add("inpu_error");
+                        eduinput.focus();
+
 
         isvalid = false;
     } else
@@ -178,6 +194,8 @@ function language()
         langgerror.textContent = 'Please Select The language';
         langgerror.style.display = 'block';
         langinput.classList.add("inpu_error");
+                        langinput.focus();
+
 
         isvalid = false;
     } else
@@ -204,6 +222,8 @@ function percentage()
         perrerror.textContent = 'Please Select The Percentage';
         perrerror.style.display = 'block';
         perinput.classList.add("inpu_error");
+                        perinput.focus();
+
 
 
         isvalid = false;
@@ -229,6 +249,8 @@ function passyear()
         passserror.textContent = 'Please Select The Pass Year';
         passserror.style.display = 'block';
         passinput.classList.add("inpu_error");
+                        passinput.focus();
+
 
         isvalid = false;
     } else
@@ -256,6 +278,8 @@ function wing()
         winggerror.textContent = 'Please Fill the Wing/flat No';
         winggerror.style.display = 'block';
         winginput.classList.add("inpu_error");
+                        winginput.focus();
+
 
         isvalid = false;
     } else
@@ -282,6 +306,8 @@ function building()
         buildderror.textContent = 'Please Fill the Building';
         buildderror.style.display = 'block';
         buildinput.classList.add("inpu_error");
+                        buildinput.focus();
+
 
         isvalid = false;
     } else
@@ -306,6 +332,8 @@ function area()
         areaaerror.textContent = 'Please Fill the Area';
         areaaerror.style.display = 'block';
         areainput.classList.add("inpu_error");
+                        areainput.focus();
+
 
         isvalid = false;
     } else
@@ -330,6 +358,8 @@ function city()
         cityyerror.textContent = 'Please Fill the city';
         cityyerror.style.display = 'block';
         cityinput.classList.add("inpu_error");
+                        cityinput.focus();
+
 
         isvalid = false;
     } else
@@ -354,6 +384,8 @@ function landmark()
         landmarkkerror.textContent = "Please Fill the landmark";
         landmarkkerror.style.display = 'block';
         landmarkinput.classList.add("inpu_error");
+                        landmarkinput.focus();
+
 
         isvalid = false;
     } else
@@ -378,6 +410,8 @@ function reference()
         referencerror.textContent = 'please fill the reference by';
         referencerror.style.display = 'block';
         refinput.classList.add("inpu_error");
+                        refinput.focus();
+
 
         isvalid = false;
     } else
@@ -397,13 +431,15 @@ function bloodgroup()
     if (bloodgrp === "")
     {
         bloodgrperror.textContent = 'please select the bloodgroup';
-        bloodgrperror.style.dispaly = 'block';
+        bloodgrperror.style.display = 'block';
         bloodinput.classList.add("inpu_error");
+                        bloodinput.focus();
+
 
         isvalid = false;
     } else
     {
-        bloodgrperror.style.dispaly = 'none';
+        bloodgrperror.style.display = 'none';
         bloodinput.classList.remove("inpu_error");
 
     }
@@ -420,6 +456,8 @@ function state()
         staterrorr.textContent = 'Please Select The State';
         staterrorr.style.display = 'block';
         stateinput.classList.add("inpu_error");
+                        stateinput.focus();
+
 
         isvalid = false;
     } else
@@ -441,6 +479,8 @@ function country()
         countryerrorr.textContent = 'Please Select The Country';
         countryerrorr.style.display = 'block';
         countryinput.classList.add("inpu_error");
+                        countryinput.focus();
+
 
         isvalid = false;
     } else
@@ -466,6 +506,8 @@ function dob()
         doberrorr.textContent = 'Please Select The Date Of Birth';
         doberrorr.style.display = 'block';
         dobinput.classList.add("inpu_error");
+                        dobinput.focus();
+
 
         isvalid = false;
     } else
@@ -490,6 +532,8 @@ function pincode()
         pincodee === "" ? (pincodeerror.textContent = "Pincode Cannot Be Blank") : (pincodee.length !== 6) ? (pincodeerror.textContent = "Pincode Should be of 6 digits") : (pincodeerror.textContent = "Pincode can Only Be in Number");
         pincodeerror.style.display = 'block';
         pininput.classList.add("inpu_error");
+                        pininput.focus();
+
 
         isvalid = false;
 
@@ -500,6 +544,9 @@ function pincode()
 
     }
 }
+
+
+
 function choose()
 {
 
@@ -522,31 +569,32 @@ function choose()
 function fmllname()
 {
 
+isvalid=true;
 
 
-
-    firstname();
-    middlename();
-    lastname();
-    mobileno();
-    email();
-    gender();
-    education();
-    language();
-    percentage();
-    passyear();
-    wing();
-    building();
-    area();
-    city();
-    bloodgroup();
+ 
+    choose();
+    reference();
     state();
     country();
+    bloodgroup();
     dob();
-    reference();
-    choose();
-    landmark();
     pincode();
+    landmark();
+    city();
+    area();
+    building();
+    wing();
+    passyear();
+    percentage();
+    language();
+    education();
+    gender();
+    email();
+    mobileno();
+    lastname();
+    middlename();
+    firstname();
 
 
     return isvalid;

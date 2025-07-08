@@ -25,14 +25,17 @@
 }
 
 .inpu_error{
-	animation: inputerror;
+    background-color:  red ;
+    border: 2px solid red;
+    animation: inputerror;
 	animation-duration: 0.6s;
 	animation-iteration-count:infinite;
         
+        
 }
 @keyframes inputerror {
-  from {background-color: red ; opacity: 1.0;}
-  to {background-color:red; opacity: 0.5;}
+  from { opacity: 1.0;}
+  to {opacity: 0.5;}
 }
 
 .up
@@ -49,7 +52,7 @@
     animation-name: downside;
      
 }
-.la
+/*.la
 {
     position: relative;
     animation-duration: 3s;
@@ -70,7 +73,66 @@
 {
   0%   { left:1000px; top:0px;}
   100% { left:0px; top:0px;}
+}*/
+.la
+{
+    position: relative;
+    animation-duration: 2s;
+    animation-name: leftside;
 }
+@keyframes leftside
+{
+  0%   { left:-1500px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+.laa
+{
+    position: relative;
+    animation-duration: 1s;
+    animation-name: leftside;
+}
+@keyframes leftside
+{
+  0%   { left:-1000px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+.ra
+{
+    position: relative;
+    animation-duration:2s;
+    animation-name: rightside;
+}
+@keyframes rightside
+{
+  0%   { left:1500px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+.raa
+{
+    position: relative;
+    animation-duration: 1s;
+    animation-name: rightside;
+}
+@keyframes rightside
+{
+  0%   { left:1000px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes upside
 {
   0%   { left:0px; top:-200px;}

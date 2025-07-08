@@ -18,30 +18,30 @@
             <div class="container">
                 <h3 class="up display-5  text-center text-black border mt-1 border-dark border-5 mb-3 rounded-pill bg-light pos wid">Admission Form</h3>
                 <div class=" row"  >
-                    <div class="la col-sm-3">
+                    <div class="la col-sm-3" tabindex="1">
                         <input id="fname" class=" inpu mar  col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'">
                         <div id="fnerror" class="blink"></div>
                     </div>
-                    <div class="la col-sm-3">
+                    <div class="laa col-sm-3" tabindex="2">
                         <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="middlen" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'">
                         <div id="mnerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-3"><!-- comment -->
+                    <div class="raa col-sm-3" tabindex="3"><!-- comment -->
                         <input id="lname" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="lastn"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
                         <div id="lnerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-3">
+                    <div class="ra col-sm-3" tabindex="4">
                         <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="no" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'" pattern="[0-9]{10}" required >
                         <div id="moberror" class="blink"></div>
                     </div>
                 </div>
 
                 <div class=" row mt-3">
-                    <div class="la col-sm-6">
+                    <div class="la col-sm-6" tabindex="5">
                         <input id="em" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="email"  placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email id'" requried>
                     <div id="emailerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-6">
+                    <div class="ra col-sm-6" tabindex="6">
                         <span class="inpu mar col-sm-12 text-black wid"><b class="text-white">Select Gender</b>
                             <br>
                             <span class="col-sm-6">
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="row mt-4">
-                    <div class="la col-lg-3">
+                    <div class="la col-lg-3" tabindex="7">
                         <span class="col-lg-12 mt-4 fw-bold text-white">Education</span>
                         <br>
                         <select id="education" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="eq" placeholder="Education Qualification"><!-- comment -->
@@ -68,7 +68,7 @@
                         <div id="ederror" class="blink"></div>
                     </div>
 
-                    <div class="la col-lg-3">
+                    <div class="laa col-lg-3" tabindex="8">
                         <span class="col-lg-12 mt-4 fw-bold text-white">language</span>
                         <br>
                         <select id="language" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="lan" placeholder="language"><!-- comment -->
@@ -81,7 +81,7 @@
                         <div id="langerror" class="blink"></div>
                     </div>
 
-                    <div class="ra col-lg-3">
+                    <div class="raa col-lg-3" tabindex="9">
                         <span class="col-lg-12 mt-4 fw-bold text-white">Percentage</span>
                         <br>
                         <select id="percentage" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="pr" placeholder="percentage">
@@ -96,7 +96,7 @@
                         <div id="pererror" class="blink"></div>
                     </div>
 
-                    <div class="ra col-lg-3">
+                    <div class="ra col-lg-3" tabindex="10">
                         <span class="col-lg-12 mt-4 fw-bold text-white">Passing Year</span>
                         <br>
                         <select id="passyear" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="year" placeholder="Passing year"><!-- comment -->
@@ -112,43 +112,43 @@
                 </div>
 
                 <div class="row mt-4"> 
-                    <div class="la col-sm-3">
+                    <div class="la col-sm-3" tabindex="11">
                         <input  id="wing" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="wing" placeholder="Wing/flat no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wing/flat no'">
                    <div id="wingerror" class="blink"></div>
                     </div>
-                    <div class="la col-sm-3">
+                    <div class="laa col-sm-3" tabindex="12">
                         <input  id="building" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="build" placeholder="Building" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Building/society'">
                     <div id="buildingerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-3">
+                    <div class="raa col-sm-3" tabindex="13">
                         <input  id="area" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="area"   placeholder="Area" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area'">
                     <div id="areaerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-3">
+                    <div class="ra col-sm-3" tabindex="14">
                         <input  id="city" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="city"   placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'">
                    <div id="cityerror" class="blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
-                    <div class="la col-sm-6">
-                        <input requried id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'">
+                    <div class="la col-sm-6" tabindex="15">
+                        <input  id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'">
                     <div id="landmarkerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-6">
-                        <input requried id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="pincode" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'">
+                    <div class="ra col-sm-6" tabindex="16">
+                        <input  id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'">
                     <div id="pincodeerror" class="blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
-                    <div class="la col-lg-3">
+                    <div class="la col-lg-3" tabindex="17">
                         <span class="col-lg-12 mt-4 text-white"><b>Dob</b></span>
                         <input id="dob" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="date" name="date" placeholder="Date-of-Birth">
                     <div id="doberror" class="blink"></div>
                     </div>
 
-                    <div class="la col-lg-3">
+                    <div class="la col-lg-3" tabindex="18">
                         <span class="col-sm-12 mt-4 fw-bold text-white">Blood-Group</span>
                         <select  id="bldgrp" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="blood">
                             <option disabled selected value="">Blood-group</option>
@@ -164,7 +164,7 @@
                         <div id="bloodgrouperror" class="blink"></div>
                     </div>
 
-                    <div class="ra col-lg-3">
+                    <div class="ra col-lg-3" tabindex="19">
                         <span class="col-sm-12 mt-4 fw-bold text-white">Country</span>
                         <select id="countryy" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="country"><!-- comment -->
 
@@ -174,7 +174,7 @@
                         <div id="countryerror" class="blink"></div>
                     </div>
 
-                    <div class="ra col-lg-3">
+                    <div class="ra col-lg-3" tabindex="20">
                         <span class="col-lg-3 mt-4 fw-bold text-white">State</span>
                         <select id="stateee" class="mar col-sm-12 bg-transparent border-white text-dark wid"  name="state"><!-- comment -->
 
@@ -213,11 +213,11 @@
                 </div>
 
                 <div class="row mt-5">
-                    <div class="la col-sm-6">
+                    <div class="la col-sm-6" tabindex="21">
                         <input id="reference" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="refer" placeholder="Reference By" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Refercence By'">
                     <div id="referenceerror" class="blink"></div>
                     </div>
-                    <div class="ra col-sm-6">
+                    <div class="ra col-sm-6" tabindex="22">
                         
                         <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="photo"  placeholder="Upload Your photo">
                    <div id="choserror" class="blink"></div>
