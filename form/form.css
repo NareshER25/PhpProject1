@@ -1,79 +1,62 @@
-.body{
+html,body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(180deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container{
-    background: #22C1C3;
+   
+    background:#22C1C3;
     box-shadow: 5px 5px 8px black;
     max-width: 600px;
     width: 75%;
-    margin: 50px auto;
-    padding: 50px;
-    
+    margin: 45px auto;
+    padding: 50px 50px;
 }
-
-
 .blink{
-	animation-name: blinker;
-	animation-duration: 0.6s;
-	animation-iteration-count:infinite;
-        color: red;
+    animation-name: blinker;
+    animation-duration: 0.6s;
+    animation-iteration-count:infinite;
+    color: red;
 }
 @keyframes blinker {
-  from {opacity: 1.0;}
-  to {opacity: 0.5;}
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.5;
+    }
 }
-
 .inpu_error{
     background-color:  red ;
     border: 2px solid red;
     animation: inputerror;
-	animation-duration: 0.6s;
-	animation-iteration-count:infinite;
-        
-        
+    animation-duration: 0.6s;
+    animation-iteration-count:infinite;
 }
 @keyframes inputerror {
-  from { opacity: 1.0;}
-  to {opacity: 0.5;}
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.5;
+    }
 }
-
 .up
 {
-     position: relative;
+    position: relative;
     animation-duration: 3s;
     animation-name: upside;
-   
 }
 .dw
 {
-     position: relative;
+    position: relative;
     animation-duration: 3s;
     animation-name: downside;
-     
 }
-/*.la
-{
-    position: relative;
-    animation-duration: 3s;
-    animation-name: leftside;
-}
-.ra
-{
-    position: relative;
-    animation-duration: 3s;
-    animation-name: rightside;
-}
-@keyframes leftside
-{
-  0%   { left:-1000px; top:0px;}
-  100% { left:0px; top:0px;}
-}
-@keyframes rightside
-{
-  0%   { left:1000px; top:0px;}
-  100% { left:0px; top:0px;}
-}*/
 .la
 {
     position: relative;
@@ -82,8 +65,14 @@
 }
 @keyframes leftside
 {
-  0%   { left:-1500px; top:0px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:-1500px;
+        top:0px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
 .laa
 {
@@ -93,8 +82,14 @@
 }
 @keyframes leftside
 {
-  0%   { left:-1000px; top:0px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:-1000px;
+        top:0px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
 .ra
 {
@@ -104,8 +99,14 @@
 }
 @keyframes rightside
 {
-  0%   { left:1500px; top:0px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:1500px;
+        top:0px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
 .raa
 {
@@ -115,33 +116,37 @@
 }
 @keyframes rightside
 {
-  0%   { left:1000px; top:0px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:1000px;
+        top:0px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes upside
 {
-  0%   { left:0px; top:-200px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:0px;
+        top:-200px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
 @keyframes downside
 {
-  0%   { left:0px; top:200px;}
-  100% { left:0px; top:0px;}
+    0%   {
+        left:0px;
+        top:200px;
+    }
+    100% {
+        left:0px;
+        top:0px;
+    }
 }
 
 .col{
@@ -166,7 +171,6 @@
     .wid{
         width: 100%;
     }
-
 }
 @media (min-width: 386px) and (max-width: 576px) {
     .container{
@@ -182,7 +186,6 @@
     .wid{
         width: 100%;
     }
-
 }
 @media (min-width: 576px) and (max-width: 686px){
     .container{
@@ -197,7 +200,6 @@
     .wid{
         width: 100%;
     }
-
 }
 @media (min-width: 686px) and (max-width: 990px){
     .container{
@@ -212,6 +214,8 @@
     .wid{
         width: 100%;
     }
-
 }
-
+.error {
+    display: none;
+    color: red;
+}

@@ -19,38 +19,39 @@
                 <h3 class="up display-5  text-center text-black border mt-1 border-dark border-5 mb-3 rounded-pill bg-light pos wid">Admission Form</h3>
                 <div class=" row"  >
                     <div class="la col-sm-3" >
-                        <input id="fname" class=" inpu mar  col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" tabindex="1">
-                        <div id="fnerror" class="blink"></div>
+                        <input id="fname" class=" inpu mar  col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" >
+                        <div id="fname_error" class="error blink"></div>
                     </div>
                     <div class="laa col-sm-3" >
-                        <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="middlen" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'" tabindex="2">
-                        <div id="mnerror" class="blink"></div>
+                        <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="middlen" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'" >
+                        <div id="mname_error" class="error blink"></div>
                     </div>
                     <div class="raa col-sm-3" ><!-- comment -->
-                        <input id="lname" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="lastn"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" tabindex="3">
-                        <div id="lnerror" class="blink"></div>
+                        <input id="ln" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="lastn"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" >
+                        <div id="ln_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-3" >
-                        <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="no" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'" pattern="[0-9]{10}" required tabindex="4">
-                        <div id="moberror" class="blink"></div>
+                        <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="no" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'"   >
+                        <div id="mob_error" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class=" row mt-3">
                     <div class="la col-sm-6" >
-                        <input id="em" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="email"  placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email id'" tabindex="5">
-                    <div id="emailerror" class="blink"></div>
+                        <input id="em" name="em" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text"  placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email id'"  >
+                    <div id="em_error" class="error blink"></div>
                     </div>
-                    <div class="ra col-sm-6" >
+                    <div class="ra col-sm-6">
                         <span class="inpu mar col-sm-12 text-black wid"><b class="text-white">Select Gender</b>
                             <br>
                             <span class="col-sm-6">
-                                <input id="m" class="inpu col-sm-1 " type="radio" name="option" value="male"  tabindex="6">male
-                                <input id="f" class="inpu col-sm-1 " type="radio" name="option" value="female" tabindex="7">female
-                                <input id="o" class="inpu col-sm-1 " type="radio" name="option" value="other" tabindex="8">other 
+                                <input id="m" class="inpu col-sm-1 " type="radio" name="option" value="male">male
+                                <input id="f" class="inpu col-sm-1 " type="radio" name="option" value="female">female
+                                <input id="o" class="inpu col-sm-1 " type="radio" name="option" value="other">other 
+                                <div id="gender_error" class="error blink"></div>
                             </span>
                         </span>
-                        <div id="generror" class="blink"></div>
+                        <div id="gend_error" class="error blink"></div>
                     </div>
                 </div>
 
@@ -58,100 +59,100 @@
                     <div class="la col-lg-3" >
                         <span class="col-lg-12 mt-4 fw-bold text-white">Education</span>
                         <br>
-                        <select tabindex="9" id="education" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="eq" placeholder="Education Qualification"  ><!-- comment -->
+                        <select id="education" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="eq" placeholder="Education Qualification"  ><!-- comment -->
 
-                            <option disabled selected value="" >Education</option>
+                            <option value="">Education</option>
                             <option value="10th">10th</option>
                             <option value="11th">11th</option>
                             <option value="12th">12th</option>
                         </select>
-                        <div id="ederror" class="blink"></div>
+                        <div id="education_sel" class="error blink"></div>
                     </div>
 
                     <div class="laa col-lg-3" >
                         <span class="col-lg-12 mt-4 fw-bold text-white">Language</span>
                         <br>
-                        <select id="language" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="lan" placeholder="language" tabindex="10"><!-- comment -->
+                        <select id="language" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="lan" placeholder="language" ><!-- comment -->
 
-                            <option  disabled selected value="">Language</option>
+                            <option value="">Language</option>
                             <option value="Hindi">Hindi</option>
                             <option value="English">English</option>
                             <option value="marathi">Marathi</option>
                         </select>
-                        <div id="langerror" class="blink"></div>
+                        <div id="language_sel" class="error blink"></div>
                     </div>
 
                     <div class="raa col-lg-3" >
                         <span class="col-lg-12 mt-4 fw-bold text-white">Percentage</span>
                         <br>
-                        <select id="percentage" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="pr" placeholder="percentage" tabindex="11">
+                        <select id="percentage" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="pr" placeholder="percentage" >
 
-                            <option disabled selected value="">percentage</option>
+                            <option value="">percentage</option>
                             <?php
-                            for ($i = 1; $i <= 100; $i++) {
+                            for ($i = 0; $i <= 100; $i++) {
                                 echo "<option>" . $i . "</option>";
                             }
                             ?>
                         </select>
-                        <div id="pererror" class="blink"></div>
+                        <div id="percentage_sel" class="error blink"></div>
                     </div>
 
                     <div class="ra col-lg-3" >
                         <span class="col-lg-12 mt-4 fw-bold text-white">Passing Year</span>
                         <br>
-                        <select id="passyear" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="year" placeholder="Passing year" tabindex="12"><!-- comment -->
-                            <option disabled selected value="">year</option>
+                        <select id="passyear" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="year" placeholder="Passing year" ><!-- comment -->
+                            <option value="">year</option>
                             <?php
-                            for ($i = 1800; $i <= 2025; $i++) {
+                            for ($i = 1995; $i <= 2025; $i++) {
                                 echo "<option>" . $i . "</option>";
                             }
                             ?>
                         </select>  
-                        <div id="passerror" class="blink"></div>
+                        <div id="passyear_sel" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4"> 
                     <div class="la col-sm-3" >
-                        <input  id="wing" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="wing" placeholder="Wing/flat no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wing/flat no'" tabindex="13">
-                   <div id="wingerror" class="blink"></div>
+                        <input  id="wing" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="wing" placeholder="Wing/flat no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wing/flat no'" >
+                   <div id="wing_error" class="error blink"></div>
                     </div>
                     <div class="laa col-sm-3" >
-                        <input  id="building" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="build" placeholder="Building" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Building/society'" tabindex="14">
-                    <div id="buildingerror" class="blink"></div>
+                        <input  id="building" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="build" placeholder="Building" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Building/society'" >
+                    <div id="building_error" class="error blink"></div>
                     </div>
                     <div class="raa col-sm-3" >
-                        <input  id="area" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="area"   placeholder="Area" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area'" tabindex="15">
-                    <div id="areaerror" class="blink"></div>
+                        <input  id="area" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="area"   placeholder="Area" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area'" >
+                    <div id="area_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-3" >
-                        <input  id="city" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="city"   placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" tabindex="16">
-                   <div id="cityerror" class="blink"></div>
+                        <input  id="city" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="city"   placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" >
+                   <div id="city_error" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
                     <div class="la col-sm-6" >
-                        <input  id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'" tabindex="17">
-                    <div id="landmarkerror" class="blink"></div>
+                        <input  id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'" >
+                    <div id="landmark_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-6" >
-                        <input  id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'" tabindex="18">
-                    <div id="pincodeerror" class="blink"></div>
+                        <input  id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'" >
+                    <div id="pincode_error" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
                     <div class="la col-lg-3" >
                         <span class="col-lg-12 mt-4 text-white"><b>Dob</b></span>
-                        <input id="dob" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="date" name="date" placeholder="Date-of-Birth" tabindex="19">
-                    <div id="doberror" class="blink"></div>
+                        <input id="dob" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="date" name="date" placeholder="Date-of-Birth" >
+                    <div id="dob_error" class="error blink"></div>
                     </div>
 
                     <div class="la col-lg-3" >
                         <span class="col-sm-12 mt-4 fw-bold text-white">Blood-Group</span>
-                        <select  id="bldgrp" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="blood" tabindex="20">
-                            <option disabled selected value="">Blood-group</option>
+                        <select  id="bldgrp" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="blood" >
+                            <option value="">Blood-group</option>
                             <option>O+</option>
                             <option>O-</option>
                             <option>A+</option>
@@ -161,24 +162,24 @@
                             <option>AB+</option>
                             <option>AB-</option>
                         </select>
-                        <div id="bloodgrouperror" class="blink"></div>
+                        <div id="bldgrp_sel" class="error blink"></div>
                     </div>
 
                     <div class="ra col-lg-3" >
                         <span class="col-sm-12 mt-4 fw-bold text-white">Country</span>
-                        <select id="countryy" class="mar col-sm-12 bg-transparent border-white text-dark wid" name="country" tabindex="21"><!-- comment -->
+                        <select id="countryy" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="country" ><!-- comment -->
 
-                            <option disabled selected value="">country</option>
+                            <option value="">country</option>
                             <option>India</option>
                         </select>
-                        <div id="countryerror" class="blink"></div>
+                        <div id="countryy_sel" class="error blink"></div>
                     </div>
 
                     <div class="ra col-lg-3" >
                         <span class="col-lg-3 mt-4 fw-bold text-white">State</span>
-                        <select id="stateee" class="mar col-sm-12 bg-transparent border-white text-dark wid"  name="state" tabindex="22"><!-- comment -->
+                        <select id="state" class="sel mar col-sm-12 bg-transparent border-white text-dark wid"  name="state" ><!-- comment -->
 
-                            <option disabled selected value="" >select state</option>
+                            <option value="" >select state</option>
                             <option>Andhra pradesh</option>
                             <option>Arunachal pradesh</option>
                             <option>Assam</option>
@@ -208,19 +209,19 @@
                             <option>Uttarakhand</option>
                             <option>West Bengal</option>
                         </select>
-                        <div id="stateerror" class="blink"></div>
+                        <div id="state_sel" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-5">
                     <div class="la col-sm-6" >
-                        <input id="reference" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="refer" placeholder="Reference By" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Refercence By'" tabindex="23">
-                    <div id="referenceerror" class="blink"></div>
+                        <input id="reference" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="refer" placeholder="Reference By" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Refercence By'" >
+                    <div id="reference_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-6" >
                         
-                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="photo"  placeholder="Upload Your photo" tabindex="24">
-                   <div id="choserror" class="blink"></div>
+                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="photo"  placeholder="Upload Your photo" >
+                   <div id="choose_error" class="error blink"></div>
                     </div>
                 </div>
 
