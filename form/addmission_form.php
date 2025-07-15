@@ -6,32 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
-        <script src="form_valid.js" > </script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="form_valid.js" ></script>
+
         <link rel="stylesheet" href="form.css">
     </head>
     <body class="body">
-        
-        
         <form onsubmit="return fmllname()">
             <div class="container">
                 <h3 class="up display-5  text-center text-black border mt-1 border-dark border-5 mb-3 rounded-pill bg-light pos wid">Admission Form</h3>
                 <div class=" row"  >
                     <div class="la col-sm-3" >
-                        <input id="fname" class=" inpu mar  col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="firstn" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" >
+                        <input id="fname" class=" inpu mar  col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="fname" placeholder="First name"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" >
                         <div id="fname_error" class="error blink"></div>
                     </div>
                     <div class="laa col-sm-3" >
-                        <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="middlen" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'" >
+                        <input id="mname" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="mname" placeholder="Middle name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Middle Name'" >
                         <div id="mname_error" class="error blink"></div>
                     </div>
                     <div class="raa col-sm-3" ><!-- comment -->
-                        <input id="ln" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="lastn"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" >
+                        <input id="ln" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid wid" type="text" name="ln"  placeholder="Last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" >
                         <div id="ln_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-3" >
-                        <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="no" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'"   >
+                        <input id="mob" class="inpu mar col-sm-12  bg-transparent border-white border-top-0 border-start-0 mt-2 border-end-0 text-white wid" type="text" name="mob" placeholder="Mobile no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile no'"   >
                         <div id="mob_error" class="error blink"></div>
                     </div>
                 </div>
@@ -39,7 +37,7 @@
                 <div class=" row mt-3">
                     <div class="la col-sm-6" >
                         <input id="em" name="em" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text"  placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email id'"  >
-                    <div id="em_error" class="error blink"></div>
+                        <div id="em_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-6">
                         <span class="inpu mar col-sm-12 text-black wid"><b class="text-white">Select Gender</b>
@@ -59,7 +57,7 @@
                     <div class="la col-lg-3" >
                         <span class="col-lg-12 mt-4 fw-bold text-white">Education</span>
                         <br>
-                        <select id="education" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="eq" placeholder="Education Qualification"  ><!-- comment -->
+                        <select id="education" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="education" placeholder="Education Qualification"  ><!-- comment -->
 
                             <option value="">Education</option>
                             <option value="10th">10th</option>
@@ -88,11 +86,11 @@
                         <select id="percentage" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="pr" placeholder="percentage" >
 
                             <option value="">percentage</option>
-                            <?php
-                            for ($i = 0; $i <= 100; $i++) {
-                                echo "<option>" . $i . "</option>";
+                            <script>
+                            for (let i = 0; i <= 100; i++) {
+                                document.write( "<option>" + i + "</option>");
                             }
-                            ?>
+                            </script>
                         </select>
                         <div id="percentage_sel" class="error blink"></div>
                     </div>
@@ -101,12 +99,14 @@
                         <span class="col-lg-12 mt-4 fw-bold text-white">Passing Year</span>
                         <br>
                         <select id="passyear" class="sel mar col-sm-12 bg-transparent border-white text-dark wid" name="year" placeholder="Passing year" ><!-- comment -->
-                            <option value="">year</option>
-                            <?php
-                            for ($i = 1995; $i <= 2025; $i++) {
-                                echo "<option>" . $i . "</option>";
-                            }
-                            ?>
+                            <option id='opt' value="">year</option>
+                            <script>
+                                for (let i = 1995; i <= 2025; i++)
+                                {   
+                                document.write('<option>'+i+'</option>');
+                                    
+                                }
+                            </script>
                         </select>  
                         <div id="passyear_sel" class="error blink"></div>
                     </div>
@@ -115,30 +115,30 @@
                 <div class="row mt-4"> 
                     <div class="la col-sm-3" >
                         <input  id="wing" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="wing" placeholder="Wing/flat no" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wing/flat no'" >
-                   <div id="wing_error" class="error blink"></div>
+                        <div id="wing_error" class="error blink"></div>
                     </div>
                     <div class="laa col-sm-3" >
                         <input  id="building" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="build" placeholder="Building" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Building/society'" >
-                    <div id="building_error" class="error blink"></div>
+                        <div id="building_error" class="error blink"></div>
                     </div>
                     <div class="raa col-sm-3" >
                         <input  id="area" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="area"   placeholder="Area" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area'" >
-                    <div id="area_error" class="error blink"></div>
+                        <div id="area_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-3" >
                         <input  id="city" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="city"   placeholder="City" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" >
-                   <div id="city_error" class="error blink"></div>
+                        <div id="city_error" class="error blink"></div>
                     </div>
                 </div>
 
                 <div class="row mt-4">
                     <div class="la col-sm-6" >
                         <input  id="landmark" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="land"   placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'" >
-                    <div id="landmark_error" class="error blink"></div>
+                        <div id="landmark_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-6" >
                         <input  id="pincode" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="pincode"  placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'" >
-                    <div id="pincode_error" class="error blink"></div>
+                        <div id="pincode_error" class="error blink"></div>
                     </div>
                 </div>
 
@@ -146,7 +146,7 @@
                     <div class="la col-lg-3" >
                         <span class="col-lg-12 mt-4 text-white"><b>Dob</b></span>
                         <input id="dob" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="date" name="date" placeholder="Date-of-Birth" >
-                    <div id="dob_error" class="error blink"></div>
+                        <div id="dob_error" class="error blink"></div>
                     </div>
 
                     <div class="la col-lg-3" >
@@ -216,12 +216,12 @@
                 <div class="row mt-5">
                     <div class="la col-sm-6" >
                         <input id="reference" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="text" name="refer" placeholder="Reference By" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Refercence By'" >
-                    <div id="reference_error" class="error blink"></div>
+                        <div id="reference_error" class="error blink"></div>
                     </div>
                     <div class="ra col-sm-6" >
-                        
+
                         <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="photo"  placeholder="Upload Your photo" >
-                   <div id="choose_error" class="error blink"></div>
+                        <div id="choose_error" class="error blink"></div>
                     </div>
                 </div>
 
@@ -230,8 +230,5 @@
                 </div>
             </div>
         </form>
-        
-        
-        
     </body>
 </html>

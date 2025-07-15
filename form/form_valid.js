@@ -6,6 +6,14 @@ $(document).ready(function () {
         });
     });
 });
+$(document).ready(function () {
+    let today = new Date();
+    let newmonths = ((today.getMonth()+1) < 10 )? ("0" + (today.getMonth()+1)): (today.getMonth()+1);
+    let lastdate = (today.getFullYear() - 18) + '-' + (newmonths) + '-' + today.getDate();    
+    $('#dob').attr('min', '1996-01-01');
+    $('#dob').attr('max', lastdate);
+});
+
 let isvalid = true;
 function testerror()
 {
@@ -26,8 +34,7 @@ function testerror()
                     $(this).addClass("inpu_error");
                     $(".inpu_error:first").focus();
                     isvalid = false;
-                }
-                else
+                } else
                 {
                     mess.style.display = 'none';
                     $(this).removeClass("inpu_error");
@@ -36,7 +43,6 @@ function testerror()
             {
                 let dobVal = $('#dob').val();
                 let dobError = document.getElementById("dob_error");
-
                 if (dobVal !== '')
                 {
                     let dobDate = new Date(dobVal);
@@ -54,8 +60,7 @@ function testerror()
                         dobError.style.display = 'none';
                         $('#dob').removeClass("inpu_error");
                     }
-                } 
-                else
+                } else
                 {
                     mess.innerText = 'Please fill the input field';
                     mess.style.display = 'block';
@@ -155,7 +160,6 @@ function testerror()
                 $("input[name = 'option']").removeClass("input_error");
             }
         }
-
     });
     $(".sel").each(function (index, element) {
         const sel_to_check = $(this).val();
@@ -176,5 +180,6 @@ function testerror()
 function fmllname()
 {
     testerror();
+    hi();
     return isvalid;
 }
