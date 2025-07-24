@@ -180,6 +180,5 @@ function testerror()
 function fmllname()
 {
     testerror();
-    hi();
     return isvalid;
 }
