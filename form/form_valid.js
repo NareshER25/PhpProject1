@@ -8,8 +8,8 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     let today = new Date();
-    let newmonths = ((today.getMonth()+1) < 10 )? ("0" + (today.getMonth()+1)): (today.getMonth()+1);
-    let lastdate = (today.getFullYear() - 18) + '-' + (newmonths) + '-' + today.getDate();    
+    let newmonths = ((today.getMonth() + 1) < 10) ? ("0" + (today.getMonth() + 1)) : (today.getMonth() + 1);
+    let lastdate = (today.getFullYear() - 18) + '-' + (newmonths) + '-' + today.getDate();
     $('#dob').attr('min', '1996-01-01');
     $('#dob').attr('max', lastdate);
 });
@@ -85,7 +85,8 @@ function testerror()
                     $(this).removeClass("inpu_error");
                 }
             }
-        } else if ($(this).attr('id') === 'em' || $(this).attr('id') === 'mob' || $(this).attr('id') === 'pincode')
+        } 
+        else if ($(this).attr('id') === 'em' || $(this).attr('id') === 'mob' || $(this).attr('id') === 'pincode')
         {
             if ($(this).attr('id') === 'em')
             {
@@ -159,6 +160,24 @@ function testerror()
                 sel_mess.style.display = 'none';
                 $("input[name = 'option']").removeClass("input_error");
             }
+        } 
+        else if ($(this).attr('id') === 'choose')
+        {
+            
+            if (val_to_check === '')
+            {
+                mess.innerText = 'Please fill the input field';
+                mess.style.display = 'block';
+                $(this).addClass("inpu_error");
+                $(".inpu.inpu_error:first").focus();
+                isvalid = false;
+            } else
+            {
+                mess.style.display = 'none';
+                $(this).removeClass("inpu_error");
+            }
+            
+            
         }
     });
     $(".sel").each(function (index, element) {

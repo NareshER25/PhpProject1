@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="form.css">
     </head>
     <body class="body">
-        <form onsubmit="return fmllname()" action="process_addmission_form.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <form onsubmit="return fmllname()" action="process_addmission_form.php" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <h3 class="up display-5  text-center text-black border mt-1 border-dark border-5 mb-3 rounded-pill bg-light pos wid">Admission Form</h3>
                 <div class=" row"  >
@@ -220,7 +220,7 @@
                     </div>
                     <div class="ra col-sm-6" >
 
-                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="choose"  placeholder="Upload Your photo" >
+                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="choose"  placeholder="Upload Your photo"  accept="image/jpg">
                         <div id="choose_error" class="error blink"></div>
                     </div>
                 </div>
