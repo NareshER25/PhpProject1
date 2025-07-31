@@ -10,7 +10,7 @@
 
         class accep_data {
 
-            public $localhost, $dbname, $conn, $query, $result, $row;
+            public $datapdo,$localhost, $dbname, $conn, $query, $result, $row;
 
             function moredata() {
                 
@@ -24,9 +24,11 @@
                     $this->datapdo = new PDO("mysql:host=$this->localhost; dbname=$this->dbname;", "root", "admin@123");
                     $this->query = "SELECT fname,mname,lname,mobile,email FROM admission_form";
                     $this->result = $this->datapdo->query($this->query);
+                    
                     if ($this->result->rowCount() > 0) {
                         echo '<table border align="center" > <tr> <th> Name </th> <th> Phone </th> <th> Email </th> </tr>';
-                        while ($row = $this->result->fetch(PDO::FETCH_ASSOC)) {
+                        while ($row = $this->result->fetch(PDO::FETCH_ASSOC))
+                        {
                             echo '<tr>' . '<td>' . $row["fname"] . " " . $row["mname"] . " " . $row["lname"] . '</td>' . '<td>' . $row["mobile"] . '</td>' . '<td>' . $row["email"] . '</td>' . '<tr>' . '<br>';
                         }
                         echo '</table>';

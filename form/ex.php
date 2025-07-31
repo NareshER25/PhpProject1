@@ -1,30 +1,8 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="form.css">
-    </head>
-    <body>
-        <p class="end">Thank You For Submitting</p>
-    </body>
-</html>
-
-
-
-
-
-
-
-
-
 <?php
 
 class Accept_data {
 
-    public $new_email_name,$imageFileType,$uploadOk,$target_file,$target_dir,$email_name,$datapdo, $choose, $query, $conn, $localhost, $dbname, $fname, $mname, $lname, $mobile, $email, $male, $education, $language, $percentage, $passyear, $wing, $building, $area, $city, $landmark, $pincode, $dob, $bloodgrp, $country, $state, $reference;
+    public $datapdo, $choose, $query, $conn, $localhost, $dbname, $fname, $mname, $lname, $mobile, $email, $male, $education, $language, $percentage, $passyear, $wing, $building, $area, $city, $landmark, $pincode, $dob, $bloodgrp, $country, $state, $reference;
 
     function read_data() {
 
@@ -53,60 +31,59 @@ class Accept_data {
         }
     }
 
+    function display() {
+        echo $this->fname;
+        echo '<br>';
+        echo $this->mname;
+        echo '<br>';
+        echo $this->lname;
+        echo '<br>';
+        echo $this->mobile;
+        echo '<br>';
+        echo $this->email;
+        echo '<br>';
+        echo $this->male;
+        echo '<br>';
+        echo $this->education;
+        echo '<br>';
+        echo $this->language;
+        echo '<br>';
+        echo $this->percentage;
+        echo '<br>';
+        echo $this->passyear;
+        echo '<br>';
+        echo $this->wing;
+        echo '<br>';
+        echo $this->building;
+        echo '<br>';
+        echo $this->area;
+        echo '<br>';
+        echo $this->city;
+        echo '<br>';
+        echo $this->landmark;
+        echo '<br>';
+        echo $this->pincode;
+        echo '<br>';
+        echo $this->dob;
+        echo '<br>';
+        echo $this->bloodgrp;
+        echo '<br>';
+        echo $this->country;
+        echo '<br>';
+        echo $this->state;
+        echo '<br>';
+        echo $this->reference;
+        echo '<br>';
+        echo $this->choose;
+    }
+
     function upload_data() {
         $this->localhost = "127.0.0.1";
         $this->dbname = "studata";
-        
-//        $this->email_name = str_replace(['@','.'], '_', $_POST['em']);
-                $this->email_name = $_POST['em'];
 
-        
-       $this->target_dir = "/Applications/XAMPP/xamppfiles/htdocs/PhpProject1/form/photo/";
-        $this->target_file = $this->target_dir . basename($_FILES["choose"]["name"]);
-        $this->uploadOk = 1;
-       $this-> imageFileType = strtolower(pathinfo($this->target_file, PATHINFO_EXTENSION));
-        $this->new_email_name =  'photo/'.$this->email_name . '.' . $this->imageFileType;
-// Check if image file is a actual image or fake image
-        if (isset($_POST["submit"])) {
-            $check = getimagesize($_FILES["choose"]["tmp_name"]);
-            if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
-                $this->uploadOk = 1;
-            } else {
-                echo "File is not an image.";
-                $this->uploadOk = 0;
-            }
-        }
-// Check if file already exists
-        if (file_exists($this->target_file)) {
-            echo "Sorry, file already exists.";
-           $this->uploadOk = 0;
-        }
-// Check file size
-        if ($_FILES["choose"]["size"] > 358400) {
-            echo "Sorry, your file is too large.";
-            $this->uploadOk = 0;
-        }
-// Allow certain file formats
-        if ($this->imageFileType != "jpg" && $this->imageFileType != "jpeg") {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-           $this->uploadOk = 0;
-        }
-// Check if $uploadOk is set to 0 by an error
-        if ($this->uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-        } else {
-            if (move_uploaded_file($_FILES["choose"]["tmp_name"], $this->new_email_name)) {
-                echo "the file" . $this->new_email_name . "Uploaded in the".$this->target_dir;
-            } else {
-                echo "nhi hua";
-            }
-        }
-        
         try {
             $this->datapdo = new PDO("mysql:host=$this->localhost; dbname=$this->dbname;", "root", "admin@123");
-            $this->query = "insert into admission_form(fname,mname,lname,mobile,email,gender,education,languagee,percentage,passyear,wing,building,areas,city,landmark,pincode,dob,bloodrp,country,state,referencee,choose) values('" . $this->fname . "', '" . $this->mname . "',' " . $this->lname . "', " . $this->mobile . ", '" . $this->email . "', '" . $this->male . "', '" . $this->education . "', '" . $this->language . "', " . $this->percentage . ", " . $this->passyear . ", '" . $this->wing . "', '" . $this->building . "', '" . $this->area . "', '" . $this->city . "', '" . $this->landmark . "', " . $this->pincode . ", '" . $this->dob . "', '" . $this->bloodgrp . "', '" . $this->country . "', '" . $this->state . "', '" . $this->reference . "','" . $this->new_email_name . "')";
+            $this->query = "insert into admission_form(fname,mname,lname,mobile,email,gender,education,languagee,percentage,passyear,wing,building,areas,city,landmark,pincode,dob,bloodrp,country,state,referencee) values('" . $this->fname . "', '" . $this->mname . "',' " . $this->lname . "', " . $this->mobile . ", '" . $this->email . "', '" . $this->male . "', '" . $this->education . "', '" . $this->language . "', " . $this->percentage . ", " . $this->passyear . ", '" . $this->wing . "', '" . $this->building . "', '" . $this->area . "', '" . $this->city . "', '" . $this->landmark . "', " . $this->pincode . ", '" . $this->dob . "', '" . $this->bloodgrp . "', '" . $this->country . "', '" . $this->state . "', '" . $this->reference . "')";
             $this->datapdo->exec($this->query);
         } catch (Exception $ex) {
             echo $ex;
@@ -114,7 +91,58 @@ class Accept_data {
     }
 }
 
+$target_dir = "/Applications/XAMPP/xamppfiles/htdocs/PhpProject1/form/";
+$target_file = $target_dir . basename($_FILES["choose"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["choose"]["tmp_name"]);
+  if($check !== false) {
+    echo "File is an image - " . $check["mime"] . ".";
+    $uploadOk = 1;
+  } else {
+    echo "File is not an image.";
+    $uploadOk = 0;
+  }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+  echo "Sorry, file already exists.";
+  $uploadOk = 0;
+}
+
+// Check file size
+if ($_FILES["choose"]["size"] > 358400) {
+  echo "Sorry, your file is too large.";
+  $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "jpeg" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["choose"]["tmp_name"], $target_file)) {
+    echo "The file ". htmlspecialchars( basename( $_FILES["choose"]["name"])). " has been uploaded.";
+  } else {
+    echo "Sorry, there was an error uploading your file.";
+  }
+}
+
+
+
+
 $acept_data = new Accept_data();
 $acept_data->read_data();
+$acept_data->display();
 $acept_data->upload_data();
 ?>

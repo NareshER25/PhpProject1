@@ -220,7 +220,7 @@
                     </div>
                     <div class="ra col-sm-6" >
 
-                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="choose"  placeholder="Upload Your photo"  accept="image/jpg">
+                        <input id="choose" class="inpu mar col-sm-12 bg-transparent border-white border-top-0 border-start-0 border-end-0 text-white wid" type="file" name="choose"  placeholder="Upload Your photo" accept="image/jpeg">
                         <div id="choose_error" class="error blink"></div>
                     </div>
                 </div>
@@ -230,5 +230,6 @@
                 </div>
             </div>
         </form>
+<!--        <p class="end">Thank You For Submitting</p>-->
     </body>
 </html>

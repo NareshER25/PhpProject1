@@ -213,3 +213,10 @@ html,body{
     display: none;
     color: red;
 }
+.end
+{
+    text-align: center;
+    font-size: 500%;
+    padding: 20%;
+    display: none;
+}

@@ -68,8 +68,6 @@ function testerror()
                     $(".inpu.inpu_error:first").focus();
                     isvalid = false;
                 }
-
-
             } else
             {
                 if (val_to_check === '')
@@ -85,8 +83,7 @@ function testerror()
                     $(this).removeClass("inpu_error");
                 }
             }
-        } 
-        else if ($(this).attr('id') === 'em' || $(this).attr('id') === 'mob' || $(this).attr('id') === 'pincode')
+        } else if ($(this).attr('id') === 'em' || $(this).attr('id') === 'mob' || $(this).attr('id') === 'pincode')
         {
             if ($(this).attr('id') === 'em')
             {
@@ -163,21 +160,44 @@ function testerror()
         } 
         else if ($(this).attr('id') === 'choose')
         {
-            
+            const fileInput = document.getElementById("choose");
+            const file = fileInput.files[0];
+
             if (val_to_check === '')
             {
-                mess.innerText = 'Please fill the input field';
+                mess.innerText = 'Please Select The File';
                 mess.style.display = 'block';
                 $(this).addClass("inpu_error");
                 $(".inpu.inpu_error:first").focus();
                 isvalid = false;
-            } else
-            {
-                mess.style.display = 'none';
-                $(this).removeClass("inpu_error");
             }
-            
-            
+            else
+            {
+                const filesize = file.size / 1024;
+                if (filesize < 300 || filesize > 350)
+                {
+                    mess.innerText = 'The File Size Must Be Between 300 to 350 kb';
+                    mess.style.display = 'block';
+                    $(this).addClass("inpu_error");
+                    $(".inpu.inpu_error:first").focus();
+                    isvalid = false;
+                } 
+                else if (!(file.type === 'image/jpg' || file.type === 'image/jpeg'))
+                {
+                    mess.innerText = 'The File Must Be in jpeg/jpg';
+                    mess.style.display = 'block';
+                    $(this).addClass("inpu_error");
+                    $(".inpu.inpu_error:first").focus();
+                    isvalid = false;
+                }
+                else
+                {
+                    mess.style.display = 'none';
+                    $(this).removeClass("inpu_error");
+                }
+
+            }
+
         }
     });
     $(".sel").each(function (index, element) {
@@ -200,4 +220,5 @@ function fmllname()
 {
     testerror();
     return isvalid;
+    
 }
