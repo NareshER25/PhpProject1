@@ -230,6 +230,5 @@
                 </div>
             </div>
         </form>
-<!--        <p class="end">Thank You For Submitting</p>-->
     </body>
 </html>
